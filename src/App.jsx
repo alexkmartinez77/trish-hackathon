@@ -117,26 +117,22 @@ componentWillMount() {
                 }
             })
 
-            return(<div>
+            return(
+            <div>
                 <img className='title-size' src='../pictures/title.png' alt='Tabata of the Day title image' />
                 <div className='container'>
                 
-                  
-                
-                
-
-                
-                <div className='row align-items-center'>
+                <div className='row '>
                   <div className='col-3' >
-                      
-                  <div className=' quote-frame'>
+                      <div className= 'row'>
+                      <div className="d-flex align-items-center">
+                  <div className=' quote-frame '>
                      <p className='center quote-text text-center'>"{this.state.quote.quote}"<br />-{'' + this.state.quote.author}</p>
                </div>
-                       
+               </div>
+                     </div>  
                   </div> 
                   <div className='col-8 offset-1'>
-                
-
                <div className='row'>
 {/* 
                <div className='btn btn-grey btn-outline-light btn-block'  aria-label='Basic example'>
@@ -151,9 +147,9 @@ componentWillMount() {
 <br />
 
    
-<h2>Tabata Total Body Burn</h2>
+<h2 className=' center-text-pls full-width'>Tabata Total Body Burn</h2>
 
-<p className='border-bottom'>This short Tabata workout does the trick to tone your arms, legs and core! All the moves are bodyweight focused so you don’t need any equipment – just a timer and a mat!<br /><br /></p>
+<p className='border-bottom center-text-pls full-width '>This short Tabata workout does the trick to tone your arms, legs and core! All the moves are bodyweight focused so you don’t need any equipment – just a timer and a mat!<br /><br /></p>
 
 {/* //I will refactor code to make less repetitive and more efficient */}
                     <ListLayout 
@@ -175,7 +171,7 @@ componentWillMount() {
                     />
      
         </div>
-        <p className='fs-1 text-center'><strong>Do 3 Rounds</strong></p>
+        <p className='bigger-text text-center'>Do 3 Rounds</p>
         </div>
                   </div>
         

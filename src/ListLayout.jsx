@@ -2,10 +2,11 @@ import React from 'react';
 //I will refactor code to make less repetitive
 export default props => (
   
-<div className="accordion accordion-flush row bg-transparent" id="accordionFlushExample">
-<div className='col-6' >
-  <div className="accordion-item bg-transparent">
-    <h2 className="accordion-header bg-transprent" id="flush-headingOne">
+<div className="accordion accordion-flush row bg-transparent full-width no-border-pls" id="accordionFlushExample">
+<div className='col-6 right-column-full-width' >
+<div className='row '>
+  <div className="accordion-item bg-transparent no-border-pls">
+    <h2 className="accordion-header bg-transprent" id="flush-headingOne ">
       <button className="accordion-button bg-transparent collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
       <div className='col-1 number-style' >
                      1
@@ -19,7 +20,7 @@ export default props => (
       <div className="accordion-body"><img src={props.exerciseBurpeeGif} className='rounded gif-size' alt='Exercise demo' /></div>
     </div>
   </div>
-  <div className="accordion-item bg-transparent">
+  <div className="accordion-item bg-transparent no-border-pls">
     <h2 className="accordion-header bg-transparent" id="flush-headingTwo">
       <button className="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
       <div className='col-1' >
@@ -35,7 +36,7 @@ export default props => (
       <div className="accordion-body"><img src={props.exercise2Gif}  className='rounded gif-size' alt='Exercise demo' /></div>
     </div>
   </div>
-  <div className="accordion-item bg-transparent">
+  <div className="accordion-item bg-transparent no-border-pls">
     <h2 className="accordion-header bg-transparent" id="flush-headingThree">
       <button className="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
       <div className='col-1' >
@@ -52,7 +53,7 @@ export default props => (
     </div>
   </div>
 
-  <div className="accordion-item bg-transparent">
+  <div className="accordion-item bg-transparent no-border-pls">
     <h2 className="accordion-header bg-transparent" id="flush-headingFour">
       <button className="accordion-button bg-transparent collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
       <div className='col-1' >
@@ -69,10 +70,11 @@ export default props => (
     </div>
   </div>
   </div>
+  </div>
  {/*  begining of 2nd column */}
-  <div className='col-6'>
-
-  <div className="accordion-item bg-transparent">
+  <div className='col-6 column-full-width'>
+    <div className='row start-top full-width'>
+  <div className="accordion-item bg-transparent no-border-pls">
     <h2 className="accordion-header bg-transparent" id="flush-headingFive">
       <button className="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
       <div className='col-1' >
@@ -89,7 +91,7 @@ export default props => (
   </div>
 
 
-  <div className="accordion-item bg-transparent">
+  <div className="accordion-item bg-transparent no-border-pls">
     <h2 className="accordion-header" id="flush-headingSix">
       <button className="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
       <div className='col-1' >
@@ -106,7 +108,7 @@ export default props => (
   </div>
 
 
-  <div className="accordion-item bg-transparent">
+  <div className="accordion-item bg-transparent no-border-pls">
     <h2 className="accordion-header" id="flush-headingSeven">
       <button className="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
         
@@ -124,7 +126,7 @@ export default props => (
   </div>
 
 
-  <div className="accordion-item bg-transparent">
+  <div className="accordion-item bg-transparent no-border-pls">
     <h2 className="accordion-header" id="flush-headingEight">
       <button className="accordion-button collapsed bg-transparent" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
       <div className='col-1' >
@@ -140,6 +142,7 @@ export default props => (
     </div>
   </div>
 
+</div>
 </div>
 </div>
 
