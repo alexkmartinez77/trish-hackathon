@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import ListLayout from './ListLayout';
 import axios from 'axios';
-//const axios = require('axios');
-
 
 class App extends Component {
     constructor(props) {
@@ -22,11 +20,8 @@ class App extends Component {
             clickNewWorkout: false,
         };
         //bind fx here 
-
-       /*  this.clickBodyArea= this.clickBodyArea.bind(this); */
-    
     }
- 
+
     //add new fxs here 
 
 componentWillMount() {
@@ -42,8 +37,6 @@ componentWillMount() {
           };
     axios.request(options).then(quoteData => {
         quote = quoteData.data
-       // quote.quote = quoteData.data.quote;
-      //  quote.author = quoteData.data.author;
         this.setState({ quote })});
     ; 
     //working end for  quote api
