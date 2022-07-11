@@ -7,10 +7,11 @@ class App extends Component {
         super(props);
         this.state = {
             bodyArea: 'fullBody',
-            quote:{
+  /*           quote:{
                 quote:'',
                 author:''
-            },
+            }, */
+            quote:'',
             exercises: [
                 0: { name:'',
                     gifUrl: '',
@@ -25,9 +26,34 @@ class App extends Component {
     //add new fxs here 
 
 componentWillMount() {
-        let quote = {};
+        /* let quote = {}; */
+
+        //start of temporary api replacement
+        let quote =''
+
+const options = {
+    method: 'POST',
+    url: 'https://motivational-quotes1.p.rapidapi.com/motivation',
+    headers: {
+      'content-type': 'application/json',
+      'X-RapidAPI-Key': '72e066e49emshcd1e7705cf8de7dp16e555jsnc11b8f72aed2',
+      'X-RapidAPI-Host': 'motivational-quotes1.p.rapidapi.com'
+    },
+    data: '{"key1":"value","key2":"value"}'
+  };
+  
+  axios.request(options).then(quoteData => {
+    quote = quoteData.data
+    this.setState({ quote })});
+; 
+
+
+//end of temporary in api replacement
+
+
+
       //  workiing start for quote api
-        const options = {
+       /*  const options = {
             method: 'GET',
             url: 'https://bodybuilding-quotes1.p.rapidapi.com/random-quote',
             headers: {
@@ -38,7 +64,7 @@ componentWillMount() {
     axios.request(options).then(quoteData => {
         quote = quoteData.data
         this.setState({ quote })});
-    ; 
+    ;  */
     //working end for  quote api
  
             //start of working exercise api
@@ -120,7 +146,7 @@ componentWillMount() {
                       <div className= 'row'>
                       <div className="d-flex align-items-center">
                   <div className=' quote-frame '>
-                     <p className='center quote-text text-center'>"{this.state.quote.quote}"<br />-{'' + this.state.quote.author}</p>
+                     <p className='center quote-text text-center'>{this.state.quote}</p>
                </div>
                </div>
                      </div>  
