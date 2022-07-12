@@ -7,17 +7,8 @@ class App extends Component {
         super(props);
         this.state = {
             bodyArea: 'fullBody',
-  /*           quote:{
-                quote:'',
-                author:''
-            }, */
             quote:'',
-            exercises: [
-                0: { name:'',
-                    gifUrl: '',
-                    },
-
-            ],
+            exercises: [],
             clickNewWorkout: false,
         };
         //bind fx here 
@@ -26,80 +17,21 @@ class App extends Component {
     //add new fxs here 
 
 componentWillMount() {
-        /* let quote = {}; */
-        //start of temporary api replacement
-        let quote =''
 
-const options = {
-    method: 'POST',
-    url: 'https://motivational-quotes1.p.rapidapi.com/motivation',
-    headers: {
-      'content-type': 'application/json',
-      'X-RapidAPI-Key': process.env.REACT_APP_APIKEY,
-      'X-RapidAPI-Host': 'motivational-quotes1.p.rapidapi.com'
-    },
-    data: '{"key1":"value","key2":"value"}'
-  };
-  
-  axios.request(options).then(quoteData => {
-    quote = quoteData.data
-    this.setState({ quote })});
-; 
+    axios.get('/api1')
+    .then(quoteData => {
+        let quote = quoteData.data
+        this.setState({ quote })
+    })
 
-
-//end of temporary in api replacement
-
-
-
-      //  workiing start for quote api
-       /*  const options = {
-            method: 'GET',
-            url: 'https://bodybuilding-quotes1.p.rapidapi.com/random-quote',
-            headers: {
-              'X-RapidAPI-Key': '72e066e49emshcd1e7705cf8de7dp16e555jsnc11b8f72aed2',
-              'X-RapidAPI-Host': 'bodybuilding-quotes1.p.rapidapi.com'
-            }
-          };
-    axios.request(options).then(quoteData => {
-        quote = quoteData.data
-        this.setState({ quote })});
-    ;  */
-    //working end for  quote api
- 
-            //start of working exercise api
-
-
-  const options2 = {
-    method: 'GET',
-    url: 'https://exercisedb.p.rapidapi.com/exercises/equipment/body%20weight',
-   headers: {
-       'X-RapidAPI-Key': process.env.REACT_APP_APIKEY,
-       'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
-   }
-   };
-
-    axios.request(options2).then(exercises => {
-        exercises = exercises.data;
-        this.setState({ exercises })});
-
-//working end of exercise api
+    axios.get('/api2')
+    .then(exerciseData => {
+        let exercises = exerciseData.data
+        this.setState({ exercises })
+    })
 
 } 
 
-    /* clickBodyArea(e){ //change state of bodyarea to what user clicked
-        const bodyAreaClicked = e.target.value;
-        this.setState({ bodyArea :  bodyAreaClicked});
-        
-        if (bodyAreaClicked == 'fullBody'){
-            console.log('fullBody is selected')
-        }
-        else if(bodyAreaClicked == 'upperBody'){
-            console.log('upperBody is selected')
-        }
-        else if(bodyAreaClicked == 'lowerBody'){
-            console.log('lowerBody is selected')
-        }
-    } */
         render(){//I will refactor code to make less repetitive and more efficient
             let exerciseBurpeeName, exercise2Name, exercise3Name, exercise4Name, exercise6Name, exercise7Name, exercise8Name;
             let exerciseBurpeeGif, exercise2Gif, exercise3Gif, exercise4Gif, exercise6Gif, exercise7Gif, exercise8Gif;
