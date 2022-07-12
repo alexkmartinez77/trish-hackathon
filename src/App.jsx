@@ -27,7 +27,6 @@ class App extends Component {
 
 componentWillMount() {
         /* let quote = {}; */
-
         //start of temporary api replacement
         let quote =''
 
@@ -36,7 +35,7 @@ const options = {
     url: 'https://motivational-quotes1.p.rapidapi.com/motivation',
     headers: {
       'content-type': 'application/json',
-      'X-RapidAPI-Key': process.env.MOTIVATIONALQUOTES,
+      'X-RapidAPI-Key': process.env.REACT_APP_APIKEY,
       'X-RapidAPI-Host': 'motivational-quotes1.p.rapidapi.com'
     },
     data: '{"key1":"value","key2":"value"}'
@@ -74,7 +73,7 @@ const options = {
     method: 'GET',
     url: 'https://exercisedb.p.rapidapi.com/exercises/equipment/body%20weight',
    headers: {
-       'X-RapidAPI-Key': process.env.EXERCISES,
+       'X-RapidAPI-Key': process.env.REACT_APP_APIKEY,
        'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
    }
    };
