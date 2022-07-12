@@ -36,7 +36,7 @@ const options = {
     url: 'https://motivational-quotes1.p.rapidapi.com/motivation',
     headers: {
       'content-type': 'application/json',
-      'X-RapidAPI-Key': '72e066e49emshcd1e7705cf8de7dp16e555jsnc11b8f72aed2',
+      'X-RapidAPI-Key': process.env.MOTIVATIONALQUOTES,
       'X-RapidAPI-Host': 'motivational-quotes1.p.rapidapi.com'
     },
     data: '{"key1":"value","key2":"value"}'
@@ -74,7 +74,7 @@ const options = {
     method: 'GET',
     url: 'https://exercisedb.p.rapidapi.com/exercises/equipment/body%20weight',
    headers: {
-       'X-RapidAPI-Key': '72e066e49emshcd1e7705cf8de7dp16e555jsnc11b8f72aed2',
+       'X-RapidAPI-Key': process.env.EXERCISES,
        'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
    }
    };
